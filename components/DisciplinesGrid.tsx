@@ -1,7 +1,5 @@
-import { Text } from "react-native"
-import Box from "./base/Box"
+import { DataTable } from 'react-native-paper'
 import React from "react"
-import TextBold from "./base/TextBold"
 
 export default function DisciplinesGrid() {
     const disciplines = [
@@ -12,42 +10,21 @@ export default function DisciplinesGrid() {
     ]
 
     return (
-        <Box.Column
-            style={{
-                width: "100%",
-            }}
-        >
-            <Box.Row
-                style={{
-                    width: "100%",
-                    justifyContent: "space-between"
-                }}
-            >
-                <TextBold>Disciplina</TextBold>
-                <TextBold>Dia</TextBold>
-                <TextBold>Carga Horária</TextBold>
-            </Box.Row>
-            <Box.Column
-                style={{
-                    gap: 3,
-                }}
-            >
-                {
-                    disciplines.map((discipline, i) => (
-                        <Box.Row
-                            key={ i }
-                            style={{
-                                width: "100%",
-                                justifyContent: "space-between"
-                            }}
-                        >
-                            <Text>{ discipline.name }</Text>
-                            <Text>{ discipline.day }</Text>
-                            <Text>{ discipline.time }</Text>
-                        </Box.Row>
-                    ))
-                }
-            </Box.Column>
-        </Box.Column>
+        <DataTable>
+            <DataTable.Header>
+                <DataTable.Title>Disciplina</DataTable.Title>
+                <DataTable.Title>Dia</DataTable.Title>
+                <DataTable.Title>Carga Horária</DataTable.Title>
+            </DataTable.Header>
+            {
+                disciplines.map((discipline, i) => (
+                    <DataTable.Row key={ i }>
+                        <DataTable.Cell>{ discipline.name }</DataTable.Cell>
+                        <DataTable.Cell>{ discipline.day }</DataTable.Cell>
+                        <DataTable.Cell>{ discipline.time }</DataTable.Cell>
+                    </DataTable.Row>
+                ))
+            }
+        </DataTable>
     )
 }

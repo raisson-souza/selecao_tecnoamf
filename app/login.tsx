@@ -35,9 +35,7 @@ export default function LoginScreen() {
     }
 
     return (
-        <Screen
-
-        >
+        <Screen flex>
             <Box.Center
                 style={{
                     gap: 10,

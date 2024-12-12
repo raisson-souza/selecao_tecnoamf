@@ -61,7 +61,7 @@ export default function AuthContextComponent({ children }: AuthContextProps) {
 
     if (loading) {
         return (
-            <Screen>
+            <Screen flex>
                 <Loading />
             </Screen>
         )

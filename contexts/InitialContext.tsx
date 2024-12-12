@@ -25,7 +25,7 @@ export default function InitialContextComponent({ children }: InitialContextProp
 
     if (loading) {
         return (
-            <Screen>
+            <Screen flex>
                 <Box.Column
                     style={{
                         gap: 3,

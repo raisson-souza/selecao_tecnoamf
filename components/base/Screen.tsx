@@ -2,12 +2,18 @@ import { StyleSheet, ScrollView } from "react-native"
 
 type ScreenProps = {
     children: JSX.Element[] | JSX.Element
+    flex?: boolean
 }
 
 /** Componente padrão de tela */
-export const Screen: React.FC<ScreenProps> = ({ children }) => {
+export const Screen: React.FC<ScreenProps> = ({ children, flex = false }) => {
     return (
-        <ScrollView contentContainerStyle={ styles.container }>
+        <ScrollView
+            contentContainerStyle={{
+                ...styles.container,
+                flex: flex ? 1 : undefined
+            }}
+        >
             { children }
         </ScrollView>
     )
@@ -15,7 +21,6 @@ export const Screen: React.FC<ScreenProps> = ({ children }) => {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
