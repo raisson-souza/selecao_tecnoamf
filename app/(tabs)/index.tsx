@@ -1,11 +1,11 @@
 import { AuthContextProvider } from "@/contexts/AuthContext"
 import { CustomImage } from "@/components/customs/CustomImage"
 import { Screen } from "@/components/base/Screen"
-import { Text } from "react-native"
 import AuthRoute from "@/components/auth/Auth"
 import Box from "@/components/base/Box"
 import CustomButton from "@/components/customs/CustomButton"
 import DisciplinesGrid from "@/components/DisciplinesGrid"
+import StudentInfo from "@/components/StudentInfo"
 import TextBold from "@/components/base/TextBold"
 
 export default function UserScreen() {
@@ -34,24 +34,7 @@ export default function UserScreen() {
                         />
                         <TextBold>João da Silva</TextBold>
                     </Box.Center>
-                    <Box.Column
-                        style={{
-                            gap: 3,
-                        }}
-                    >
-                        <Box.Row>
-                            <TextBold>Registro Acadêmico:&nbsp;</TextBold>
-                            <Text>007154</Text>
-                        </Box.Row>
-                        <Box.Row>
-                            <TextBold>Curso:&nbsp;</TextBold>
-                            <Text>Ciências Contábeis</Text>
-                        </Box.Row>
-                        <Box.Row>
-                            <TextBold>Período Letivo:&nbsp;</TextBold>
-                            <Text>2024/2</Text>
-                        </Box.Row>
-                    </Box.Column>
+                    <StudentInfo />
                     <CustomButton
                         title="Emitir atestado de matrícula"
                         onPress={ () => {} }
