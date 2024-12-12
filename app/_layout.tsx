@@ -26,7 +26,7 @@ export default function RootLayout() {
           screenOptions={ StackScreensStyle }
         >
           <Stack.Screen name='(tabs)' options={{ title: "Tabs", headerShown: false }} />
-          <Stack.Screen name='login' options={{ title: "Login" }} />
+          <Stack.Screen name='login' options={{ title: "Login", headerShown: false }} />
         </Stack>
       </AuthContextComponent>
     </InitialContextComponent>
