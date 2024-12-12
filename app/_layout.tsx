@@ -11,6 +11,11 @@ const StackScreensStyle = {
   headerTintColor: "white",
 }
 
+/**
+ * Caso não logado, redirecionar para login;
+ * Opção de sair da conta;
+ */
+
 export default function RootLayout() {
   return (
     <InitialContextComponent>
@@ -21,8 +26,7 @@ export default function RootLayout() {
           screenOptions={ StackScreensStyle }
         >
           <Stack.Screen name='(tabs)' options={{ title: "Tabs", headerShown: false }} />
-          <Stack.Screen name='post' options={{ title: "Post" }} />
-          <Stack.Screen name='credits' options={{ title: "Créditos" }} />
+          <Stack.Screen name='login' options={{ title: "Login" }} />
         </Stack>
       </AuthContextComponent>
     </InitialContextComponent>

@@ -1,7 +1,5 @@
 import { Tabs } from "expo-router"
-import IconAntDesign from "react-native-vector-icons/AntDesign"
-import IconFontAwesome6 from "react-native-vector-icons/FontAwesome6"
-import IconIonicons from "react-native-vector-icons/Ionicons"
+import IconFontAwesome from "react-native-vector-icons/FontAwesome"
 
 const TabScreensStyle = {
     /** Cor de fundo da tab ativa */
@@ -27,25 +25,11 @@ export default function RootLayout() {
             screenOptions={ TabScreensStyle }
         >
             <Tabs.Screen
-                name='user'
-                options={{
-                    title: "Usuário",
-                    tabBarIcon: ({ color, size }) => (<IconAntDesign name="user" color={ color } size={ size } />),
-                }}
-            />
-            <Tabs.Screen
                 name='index'
                 options={{
+                    title: "Usuário",
+                    tabBarIcon: ({ color, size }) => (<IconFontAwesome name="user-circle-o" color={ color } size={ size } />),
                     headerShown: false,
-                    tabBarLabel: "Home",
-                    tabBarIcon: ({ color, size }) => (<IconIonicons name="home-outline" color={ color } size={ size } />),
-                }}
-            />
-            <Tabs.Screen
-                name='posts'
-                options={{
-                    title: "Posts",
-                    tabBarIcon: ({ color, size }) => (<IconFontAwesome6 name="newspaper" color={ color } size={ size } />),
                 }}
             />
         </Tabs>
