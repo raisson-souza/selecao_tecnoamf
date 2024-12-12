@@ -1,12 +1,12 @@
-import { Link, Redirect, useRouter } from "expo-router"
-import { Screen } from "@/components/base/Screen"
-import Box from "@/components/base/Box"
-import TextBold from "@/components/base/TextBold"
-import CustomInput from "@/components/customs/CustomInput"
-import { CustomImage } from "@/components/customs/CustomImage"
 import { AuthContextProvider } from "@/contexts/AuthContext"
-import CustomButton from "@/components/customs/CustomButton"
+import { CustomImage } from "@/components/customs/CustomImage"
+import { Screen } from "@/components/base/Screen"
 import { useEffect, useState } from "react"
+import { useRouter } from "expo-router"
+import Box from "@/components/base/Box"
+import CustomButton from "@/components/customs/CustomButton"
+import CustomInput from "@/components/customs/CustomInput"
+import TextBold from "@/components/base/TextBold"
 
 export default function LoginScreen() {
     const { login, isLogged } = AuthContextProvider()

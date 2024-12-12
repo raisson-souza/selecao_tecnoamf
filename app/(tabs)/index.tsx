@@ -17,6 +17,7 @@ export default function UserScreen() {
                 <Box.Column
                     style={{
                         gap: 10,
+                        width: "100%",
                     }}
                 >
                     <Box.Center
